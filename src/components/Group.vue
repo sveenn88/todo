@@ -78,6 +78,7 @@ export default {
   methods: {
     saveGroup(group) {
       this.$store.dispatch('saveGroup', group)
+      this.newGroup = {id: 'new', name: ''}
     },
     removeGroup() {
       this.$store.dispatch('deleteGroup', this.deleteGroup);
