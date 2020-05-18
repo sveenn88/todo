@@ -197,8 +197,9 @@ export default {
     },
     countSelectTask () {
       let count = 0
+      let list = this.selectList
       this.tasks.forEach(x => {
-        if(this.selectList[x.id]) {
+        if(list[x.id]) {
           count++
         }
       })
