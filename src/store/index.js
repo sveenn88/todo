@@ -131,8 +131,12 @@ export default new Vuex.Store({
     SET_SERVICE_SHOW(state) {
       state.serviceShow = !state.serviceShow;
     },
-    SET_MENU_SHOW(state) {
-      state.menuShow = !state.menuShow;
+    SET_MENU_SHOW(state, menu = null) {
+      if (menu === null) {
+        state.menuShow = !state.menuShow;
+      } else {
+        state.menuShow = menu
+      }      
     },
     SET_TITLE(state, title) {
       if (!title) {
@@ -144,7 +148,7 @@ export default new Vuex.Store({
       state.loading = true;
       setTimeout(() => {
         state.loading = null;
-      }, 1500);
+      }, 1500); 
     },
     SET_SUCCESS(state, success) {
       state.success = success;

@@ -96,7 +96,7 @@ export default {
     }
   },
   mounted() {
-    this.$store.commit('SET_MENU_SHOW');
+    this.$store.commit('SET_MENU_SHOW', false);
     this.$store.commit('SET_STORAGE_GROUPS');
     this.$store.commit('SET_STORAGE_TASKS');
   },
